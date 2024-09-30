@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -11,3 +13,92 @@ html {
     font-size: 62.5%;
 }
 
+
+:root {
+    --salmon-gradient: linear-gradient(to bottom right, #f8bfbf, #ee8b8b);
+    --brown: #423a3a;
+    --pink-brown: #ce9898;
+    --pink: #ee8b8b;
+
+    --main-font: "Josefin Sans"
+    --main-font-size: clamp(0.75rem, 0.662rem + 0.3756vw, 1rem);
+}
+
+/* ! Common */
+
+.jf-300 {
+    font-family: var(--main-font);
+    font-weight: 300;
+}
+
+.jf-400 {
+    font-family: var(--main-font);
+    font-weight: 400;
+}
+
+.jf-600 {
+    font-family: var(--main-font);
+    font-weight: 600;
+}
+
+.pad {
+    padding: 4rem;
+}
+
+.main-container {
+    height: 100vh;
+    display: grid;
+    grid-template-areas: 
+        "header"
+        "main-img"
+        "main-section";
+    grid-template-columns: 1fr;
+    grid-template-rows: 15% 35% 50%;
+}
+
+.header {
+    background-color: white;
+    display: flex;
+    align-items: center;
+}
+
+.main-img {
+    background-image: url("images/hero-mobile.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.main-section {
+    background: linear-gradient(to bottom right, white, var(--pink));
+    display: flex;
+    flex-direction: column;
+    padding: 8rem 4rem;
+    align-items: center;
+}
+
+@media (min-width: 640px) {
+    .main-img {
+        background-image: url("images/hero-desktop.jpg");
+    }
+
+    .main-container {
+        grid-template-rows: 15% 50% 35%;
+    }
+}
+
+@media (min-width: 1080px) {
+    .main-container {
+        grid-template-columns: 55% 45%;
+        grid-template-rows: 20% 80%;
+    }
+
+    .header, .main-section {
+        grid-column: 1;
+    }
+
+    .main-img {
+        grid-column: 2;
+        grid-row: 1 / span 2;
+        background-image: url("images/hero-desktop.jpg");
+    }
+}
