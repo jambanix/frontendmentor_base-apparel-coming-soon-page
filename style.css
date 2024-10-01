@@ -23,10 +23,6 @@ html {
 
 /* ! Common */
 
-.pad {
-    padding: 4rem;
-}
-
 .wrapper {
     width: 100%;
     max-width: 72.4rem;
@@ -45,6 +41,8 @@ html {
     font-family: "Josefin Sans";
 }
 
+/* ! Header */
+
 .header {
     background-color: white;
     display: flex;
@@ -52,12 +50,16 @@ html {
     justify-content: center;
 }
 
+/* ! Image */
+
 
 .main-img {
     background-image: url("images/hero-mobile.jpg");
     background-repeat: no-repeat;
     background-size: cover;
 }
+
+/* ! Text section */
 
 .main-section {
     display: flex;
@@ -97,6 +99,8 @@ html {
     color: var(--pink-brown);
 }
 
+/* ! Form */
+
 .form {
     width: 100%;
     border: none;
@@ -120,8 +124,6 @@ html {
     font-family: "Josefin Sans";
 }
 
-
-
 .form-inputs input::placeholder {
     color: var(--pink);
 }
@@ -135,6 +137,8 @@ html {
     background-color: var(--pink);
     cursor: pointer;
 }
+
+/* ! Javascript */
 
 .error-icon {
     position: absolute;
@@ -155,6 +159,8 @@ html {
 .hide {
     opacity: 0;
 }
+
+/* ! Responsiveness */
 
 @media (min-width: 501px) {
     .main-p {
