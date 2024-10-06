@@ -31,7 +31,7 @@ const setError = (bool) => {
     }
 }
 
-emailSubmit.addEventListener("click", () => {
+const submit = () => {
     if (emailInput.value) {
         if (!validateEmail(emailInput.value)) {
             setError(true);
@@ -41,6 +41,16 @@ emailSubmit.addEventListener("click", () => {
             success();
         }
     }
+}
+
+document.addEventListener("keydown", (event) => {
+    if (event.key == "Enter") {
+        submit();
+    }
+})
+
+emailSubmit.addEventListener("click", () => {
+    submit();
 });
 
 emailInput.addEventListener("keydown", () => {
